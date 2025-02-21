@@ -2,15 +2,15 @@
 #include <iomanip>
 using namespace std;
 
-void showKilometers(double meters) {
+void Kilometers(double meters) {
     cout << meters << " meters is " << meters * 0.001 << " kilometers." << endl;
 }
 
-void showInches(double meters) {
+void Inches(double meters) {
     cout << meters << " meters is " << meters * 39.37 << " inches." << endl;
 }
 
-void showFeet(double meters) {
+void Feet(double meters) {
     cout << meters << " meters is " << meters * 3.281 << " feet." << endl;
 }
 
@@ -40,13 +40,13 @@ int main() {
 
         switch (choice) {
             case 1:
-                showKilometers(meters);
+                Kilometers(meters);
                 break;
             case 2:
-                showInches(meters);
+                Inches(meters);
                 break;
             case 3:
-                showFeet(meters);
+                Feet(meters);
                 break;
             case 4:
                 cout << "Bye!" << endl;

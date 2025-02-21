@@ -2,7 +2,7 @@
 #include <iomanip>
 using namespace std;
 
-bool isPrime(int num) {
+bool Prime(int num) {
     if (num <= 1) return false;
     for (int i = 2; i <= num / 2; ++i) {
         if (num % i == 0) return false;
@@ -15,7 +15,7 @@ int main() {
     cout << "Enter an integer: ";
     cin >> num;
 
-    if (isPrime(num)) {
+    if (Prime(num)) {
         cout << num << " is a prime number." << endl;
     } else {
         cout << num << " is not a prime number." << endl;

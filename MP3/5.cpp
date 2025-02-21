@@ -6,23 +6,23 @@ const double LABOR_COST_PER_HOUR = 120.00;
 const double SQUARE_FEET_PER_GALLON = 115.0;
 const double HOURS_PER_GALLON = 8.0;
 
-double calculateGallons(double totalSqFt) {
+double Gallons(double totalSqFt) {
     return totalSqFt / SQUARE_FEET_PER_GALLON;
 }
 
-double calculateLaborHours(double totalSqFt) {
+double LaborHours(double totalSqFt) {
     return (totalSqFt / SQUARE_FEET_PER_GALLON) * HOURS_PER_GALLON;
 }
 
-double calculatePaintCost(double gallons, double pricePerGallon) {
+double PaintCost(double gallons, double pricePerGallon) {
     return gallons * pricePerGallon;
 }
 
-double calculateLaborCost(double laborHours) {
+double LaborCost(double laborHours) {
     return laborHours * LABOR_COST_PER_HOUR;
 }
 
-double calculateTotalCost(double paintCost, double laborCost) {
+double TotalCost(double paintCost, double laborCost) {
     return paintCost + laborCost;
 }
 
@@ -41,11 +41,11 @@ int main() {
         totalSqFt += sqFt;
     }
 
-    double gallons = calculateGallons(totalSqFt);
-    double laborHours = calculateLaborHours(totalSqFt);
-    double paintCost = calculatePaintCost(gallons, pricePerGallon);
-    double laborCost = calculateLaborCost(laborHours);
-    double totalCost = calculateTotalCost(paintCost, laborCost);
+    double gallons = Gallons(totalSqFt);
+    double laborHours = LaborHours(totalSqFt);
+    double paintCost = PaintCost(gallons, pricePerGallon);
+    double laborCost = LaborCost(laborHours);
+    double totalCost = TotalCost(paintCost, laborCost);
 
     cout << "Gallons of paint required: " << fixed << setprecision(2) << gallons << endl;
     cout << "Hours of labor required: " << laborHours << endl;
