@@ -2,16 +2,16 @@
 #include <iomanip>
 using namespace std;
 
-const double LABOR_COST_PER_HOUR = 120.00;
-const double SQUARE_FEET_PER_GALLON = 115.0;
-const double HOURS_PER_GALLON = 8.0;
+const double LaborPerHour = 120.00;
+const double SqftPerGallon = 115.0;
+const double HrsPerGallon = 8.0;
 
 double Gallons(double totalSqFt) {
-    return totalSqFt / SQUARE_FEET_PER_GALLON;
+    return totalSqFt / SqftPerGallon;
 }
 
 double LaborHours(double totalSqFt) {
-    return (totalSqFt / SQUARE_FEET_PER_GALLON) * HOURS_PER_GALLON;
+    return (totalSqFt / SqftPerGallon) * HrsPerGallon;
 }
 
 double PaintCost(double gallons, double pricePerGallon) {
@@ -19,7 +19,7 @@ double PaintCost(double gallons, double pricePerGallon) {
 }
 
 double LaborCost(double laborHours) {
-    return laborHours * LABOR_COST_PER_HOUR;
+    return laborHours * LaborPerHour;
 }
 
 double TotalCost(double paintCost, double laborCost) {
