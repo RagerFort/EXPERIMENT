@@ -2,8 +2,8 @@
 #include <iomanip>
 using namespace std;
 
-double calculatedRetail(double cost, double markup) {
-    return cost + (cost * markup / 100);
+double calculatedRetail(double cost, double markup) { // Function to calculate the retail price
+    return cost + (cost * markup / 100); //
 }
 
 int main() {
