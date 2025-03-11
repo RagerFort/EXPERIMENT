@@ -4,7 +4,14 @@ using namespace std;
 int main() {
     char choice;
 
-    cout << "Enter your choice (A-E): ";
+    cout << "[A] Push Data\n";
+    cout << "[B] Pop Data\n";
+    cout << "[C] Show Front\n";
+    cout << "[D] Show Back\n";
+    cout << "[E] Show Size\n";
+    cout << "[F] Quit\n";
+    cout << "Enter Choice: ";
+
     cin >> choice;
 
     switch (choice) {

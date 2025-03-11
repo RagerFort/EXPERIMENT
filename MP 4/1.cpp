@@ -1,6 +1,6 @@
+//PATRICK ALDE
 #include <iostream>
 #include <stack>
-
 using namespace std;
 
 void displayMenu() {
@@ -13,10 +13,11 @@ void displayMenu() {
 }
 
 int main() {
-    stack<int> s;
+    stack<int> A;
+    int n;
     char choice;
-    int value;
 
+   
     do {
         displayMenu();
         cin >> choice;
@@ -24,15 +25,15 @@ int main() {
         switch (choice) {
             case 'A':
             case 'a':
-                cout << "Enter value to push: ";
-                cin >> value;
-                s.push(value);
+                cout << "Input the number to push: ";
+                cin >> n;
+                A.push(n);
                 cout << "Value pushed.\n";
                 break;
             case 'B':
             case 'b':
-                if (!s.empty()) {
-                    s.pop();
+                if (!A.empty()) {
+                    A.pop();
                     cout << "Value popped.\n";
                 } else {
                     cout << "Stack is empty.\n";
@@ -40,15 +41,15 @@ int main() {
                 break;
             case 'C':
             case 'c':
-                if (!s.empty()) {
-                    cout << "Top value: " << s.top() << "\n";
+                if (!A.empty()) {
+                    cout << "Top value: " << A.top() << "\n";
                 } else {
                     cout << "Stack is empty.\n";
                 }
                 break;
             case 'D':
             case 'd':
-                cout << "Stack size: " << s.size() << "\n";
+                cout << "Stack size: " << A.size() << "\n";
                 break;
             case 'E':
             case 'e':
@@ -59,5 +60,13 @@ int main() {
         }
     } while (choice != 'E' && choice != 'e');
 
+    cout << "Contents of stack: " << endl;
+    while (!A.empty()) {
+        cout << A.top() << "\t";
+        A.pop();
+    }
+    cout << endl;
+
+    cout << system("pause");
     return 0;
 }
