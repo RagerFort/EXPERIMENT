@@ -53,7 +53,7 @@ int main() {
                 break;
             case 'E':
             case 'e':
-                cout << "Quitting...\n";
+                cout << "Loading...\n";
                 break;
             default:
                 cout << "Invalid choice. Please try again.\n";
