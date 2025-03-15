@@ -1,7 +1,7 @@
 // PATRICK ALDE
 #include <iostream>
-#include <stack>
-#include <string> // Include string header
+#include <stack> // Include the stack library
+#include <string> // Include the string library
 using namespace std;
 
 // Function to display the menu
@@ -19,8 +19,8 @@ void pushData(stack<string>& A) {
     string n;
     cout << "Input the string to push: ";
     cin >> n;
-    A.push(n);
-    cout << "Value pushed.\n";
+    A.push(n); // Push the value to the stack
+    cout << "Value pushed.\n"; // Notify the user that the value has been pushed
 }
 
 // Function to pop data from the stack
@@ -48,7 +48,7 @@ void showSize(stack<string>& A) {
 }
 
 // Function to display the contents of the stack
-void StackContents(stack<string>& A) {
+void displayStackContents(stack<string>& A) {
     cout << "Contents of stack: " << endl;
     while (!A.empty()) {
         cout << A.top() << "\t";
