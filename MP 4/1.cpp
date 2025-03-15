@@ -48,7 +48,7 @@ void showSize(stack<string>& A) {
 }
 
 // Function to display the contents of the stack
-void displayStackContents(stack<string>& A) {
+void StackContents(stack<string>& A) {
     cout << "Contents of stack: " << endl;
     while (!A.empty()) {
         cout << A.top() << "\t";
