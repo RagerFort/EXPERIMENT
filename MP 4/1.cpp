@@ -1,9 +1,10 @@
 //PATRICK ALDE
 #include <iostream>
 #include <stack>
+#include <string> // Include string header
 using namespace std;
 
-void displayMenu() {
+void Menu() {
     cout << "[A] Push Data\n";
     cout << "[B] Pop Data\n";
     cout << "[C] Show Top\n";
@@ -13,19 +14,18 @@ void displayMenu() {
 }
 
 int main() {
-    stack<int> A;
-    int n;
+    stack<string> A; // Change stack type to string
+    string n; // Change variable type to string
     char choice;
 
-   
     do {
-        displayMenu();
+        Menu();
         cin >> choice;
 
         switch (choice) {
             case 'A':
             case 'a':
-                cout << "Input the number to push: ";
+                cout << "Input the string to push: "; // Update prompt
                 cin >> n;
                 A.push(n);
                 cout << "Value pushed.\n";
