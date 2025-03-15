@@ -5,13 +5,13 @@
 using namespace std;
 
 // Function to display the menu
-void Menu() {
+void Menu() { 
     cout << "[A] Push Data\n";
     cout << "[B] Pop Data\n";
     cout << "[C] Show Top\n";
     cout << "[D] Show Size\n";
     cout << "[E] Quit\n";
-    cout << "Enter Choice: ";
+    cout << "Enter Choice: "; 
 }
 
 // Function to push data onto the stack
@@ -50,44 +50,44 @@ void showSize(stack<string>& A) {
 // Function to display the contents of the stack
 void displayStackContents(stack<string>& A) {
     cout << "Contents of stack: " << endl;
-    while (!A.empty()) {
-        cout << A.top() << "\t";
-        A.pop();
+    while (!A.empty()) { // Loop through the stack until it is empty
+        cout << A.top() << "\t"; // Display the top value of the stack
+        A.pop(); // Pop the top value of the stack
     }
     cout << endl;
 }
 
-int main() {
+int main() { // Main function
     stack<string> A; 
     char choice;
 
     do {
-        Menu();
+        Menu(); // Display the menu
         cin >> choice;
 
-        switch (choice) {
+        switch (choice) { // Switch statement to determine the choice of the user
             case 'A':
             case 'a':
-                pushData(A);
+                pushData(A); // Use the pushData function
                 break;
             case 'B':
             case 'b':
-                popData(A);
+                popData(A); // Use the popData function
                 break;
             case 'C':
             case 'c':
-                showTop(A);
+                showTop(A); // Use the showTop function
                 break;
             case 'D':
             case 'd':
-                showSize(A);
+                showSize(A); // Use the showSize function
                 break;
             case 'E':
             case 'e':
-                cout << "Loading...\n";
+                cout << "Exeting the program and showing the content of the stack\n"; 
                 break;
             default:
-                cout << "Invalid choice. Please try again.\n";
+                cout << "Invalid choice. Please try again.\n"; // Prompt the user to try again
         }
     } while (choice != 'E' && choice != 'e');
 
