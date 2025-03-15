@@ -89,7 +89,7 @@ int main() {
                 cout << "Quitting...\n"; // Quit the program
                 break;
             default:
-                cout << "Wrong choice. Please try again.\n"; // Handle invalid choices
+                cout << "Invalid choice. Please try again.\n"; // Handle invalid choices
         }
     } while (choice != 'F' && choice != 'f'); // Continue until the user chooses to quit
 
