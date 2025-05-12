@@ -84,7 +84,7 @@ int main() { // Main function
                 break;
             case 'E':
             case 'e':
-                cout << "Exeting the program and showing the content of the stack\n"; 
+                cout << "Exiting the program and showing the content of the stack\n"; 
                 break;
             default:
                 cout << "Invalid choice. Please try again.\n"; // Prompt the user to try again
